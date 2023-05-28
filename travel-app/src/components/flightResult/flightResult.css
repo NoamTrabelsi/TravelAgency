@@ -1,0 +1,129 @@
+.FContainer{
+    width: 70%;
+    height: auto;
+    display: flex;
+    box-shadow: 0px 0px 15px #8888889c;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+}
+
+.mainUp{
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+    height: 25px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.right > p {
+    margin:4px 0px;
+}
+
+.priceAndBottun{
+    height: 100%;
+    padding: 20px 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DEEEF5;
+    color: #0A7CAE;
+    font-weight: bold;
+}
+
+#flight {
+    height: 40px;
+    width: 60px;
+    animation: flyAn 10s ease-in-out infinite;
+    transition: transform 150ms ease; 
+}
+
+.flightButton {
+    height: 20px;
+    width: 30px;
+    position:relative;
+    bottom: 0px;
+    left: -20px;
+    transform: rotate(-10deg);
+    animation-duration: 0.6s;
+    z-index: 0;
+}
+
+.btnWithFly > button:hover + .flightButton{
+    animation-name: flyB;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes flyB{
+    100%{transform: translate(70px, -40px) rotate(-30deg);}
+}
+
+@keyframes flyAn {
+    /* 0%{transform: translate(0px, 0px)  scale(1);opacity: 1; }; */
+    50%{transform: translate(10px, -10px)  scale(1) rotate(-10deg);};
+    70%{transform: translate(15px, -15px)  scale(1);};
+    100%{transform: translate(20px, -20px)  scale(1);};
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.hour {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.fc {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.leftSide{
+    background-color: #ffffff;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.btnF{
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #0A7CAE;
+    width: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    border: 1px solid #0A7CAE;
+    height: 35px;
+    transition: 0.3s;
+    z-index: 3;
+}
+
+.btnWithFly{
+    width: 50px;
+    border-radius: 30px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.btnF:hover {
+    /* background-color: white; */
+    color: #00A1D6;
+}
